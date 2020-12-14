@@ -1,0 +1,30 @@
+<template>
+    <lightning-card>
+       <lightning-card>
+          <div class="slds-grid slds-gutters">
+             <div class="slds-col">
+                <span>1</span>
+             </div>
+             <div class="slds-col">
+                <span>2</span>
+             </div>
+             <div class="slds-col">
+                <lightning-tile label="Lightning component team" href="/path/to/somewhere">
+                   <p class="slds-truncate" title="7 Members">7 Members</p>
+                </lightning-tile>
+             </div>
+          </div>
+       </lightning-card>
+       <template if:true={mapMarkers}>
+          <article class="slds-card">
+             <lightning-map
+                map-markers={mapMarkers}
+                zoom-level="7">
+             </lightning-map>
+          </article>
+       </template>
+       <template if:true={errors}>
+          <p>{errors}</p>
+       </template>
+    </lightning-card>
+ </template>
